@@ -1,0 +1,61 @@
+# Environment variables
+.env
+.env.local
+.env.production
+backend/.env
+frontend/.env.local
+
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+logs/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Database / local storage
+*.db
+*.sqlite3
+postgres_data/
+redis_data/
+
+# Generated vector stores / large files
+data/vector_stores/
+*.faiss
+*.index
+
+# Raw datasets / large medical data
+data/raw/
+*.zip
+
+# Backend generated vector stores
+backend/data/vector_stores/
+
+# Data pipeline generated/raw datasets
+data_pipeline/datasets/
+data_pipeline/data/processed/
+
+# Evaluation generated results
+eval/results/
+
+# TypeScript build cache
+*.tsbuildinfo

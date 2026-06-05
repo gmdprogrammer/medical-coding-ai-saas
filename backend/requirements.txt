@@ -1,0 +1,50 @@
+# Core Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# Auth & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2            # passlib 1.7.4 is incompatible with bcrypt>=4.0
+
+# Settings & Validation
+pydantic[email]==2.5.0   # [email] extra required for EmailStr type
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+
+# AI / LLM
+groq>=0.29.0
+
+# RAG & Embeddings
+# NOTE: langchain is NOT imported directly — our RAG is implemented natively
+#       Add langchain>=0.3 only if you extend with LangChain-specific loaders.
+sentence-transformers>=2.2.2
+faiss-cpu>=1.8.0          # 1.7.4 does not exist for Python 3.12+
+
+# PHI Anonymization
+presidio-analyzer==2.2.33
+presidio-anonymizer==2.2.33
+spacy>=3.8.0             # 3.7.x has ForwardRef._evaluate bug on Python 3.12
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.26.0
+scikit-learn>=1.3.0
+
+# HTTP & Async
+httpx>=0.25.0
+aiofiles>=23.2.0
+
+# Caching (redis>=4.2 includes native async — aioredis is deprecated)
+redis>=5.0.0
+
+# Monitoring & Logging
+loguru>=0.7.0
+prometheus-fastapi-instrumentator==6.1.0
