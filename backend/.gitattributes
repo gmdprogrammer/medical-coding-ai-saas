@@ -1,0 +1,2 @@
+data/vector_stores/faiss_index filter=lfs diff=lfs merge=lfs -text
+data/vector_stores/faiss_index.meta.pkl filter=lfs diff=lfs merge=lfs -text
